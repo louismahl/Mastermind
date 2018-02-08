@@ -15,7 +15,7 @@ import javax.swing.*;
  */
 public class MastermindView extends JFrame{
     
-    private JLabel label = new JLabel("Enter capital letters");
+    private JLabel label = new JLabel("Enter 4 letters here. Solution contains these letters (R, J, B, O, V, N):");
     private JTextField text = new JTextField(4);
     private JButton submit = new JButton("Try solution");
     private JLabel good = new JLabel();
@@ -59,6 +59,7 @@ public class MastermindView extends JFrame{
     
     public String getTry(){
         // Returning the text when the button is pressed
+        System.err.println("Text is " + text.getText().toString().toUpperCase());
         return text.getText().toString().toUpperCase();
     }
     
